@@ -3,3 +3,4 @@
 .settings/org.eclipse.jdt.core.prefs
 target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst
 target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst
+*.class
