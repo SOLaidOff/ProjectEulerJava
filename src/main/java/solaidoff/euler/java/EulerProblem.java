@@ -1,5 +1,5 @@
 package solaidoff.euler.java;
 
 public abstract class EulerProblem {
-    public abstract int doProblem();
+    public abstract long doProblem();
 }

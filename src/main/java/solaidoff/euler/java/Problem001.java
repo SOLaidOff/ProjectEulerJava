@@ -1,5 +1,7 @@
 package solaidoff.euler.java;
 
+import solaidoff.euler.java.helper.EulerBasicMath;
+
 /**
  * https://projecteuler.net/problem=1
  * 
@@ -12,11 +14,13 @@ package solaidoff.euler.java;
  * Find the sum of all the multiples of 3 or 5 below 1000.
  */
 public class Problem001 extends EulerProblem {
-    public int doProblem() {
+    public static final int CEILING = 1000;
+    
+    public long doProblem() {
         int sum = 0;
         
-        for(int i = 0; i < 1000; i++) {
-            if(i % 3 == 0 || i % 5 == 0) {
+        for(int i = 0; i < CEILING; i++) {
+            if(EulerBasicMath.divisibleBy(i, 3) || EulerBasicMath.divisibleBy(i, 5)) {
                 sum += i;
             }
         }

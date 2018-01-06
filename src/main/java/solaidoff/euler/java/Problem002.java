@@ -1,5 +1,7 @@
 package solaidoff.euler.java;
 
+import solaidoff.euler.java.helper.EulerBasicMath;
+
 /**
  * https://projecteuler.net/problem=2
  * 
@@ -14,22 +16,24 @@ package solaidoff.euler.java;
  * By considering the terms in the Fibonacci sequence whose values do not exceed four million, find the sum of the even-valued terms.
  */
 public class Problem002 extends EulerProblem {
-    public int doProblem() {
+    public static final int CEILING = 4000000;
+    
+    public long doProblem() {
         int sum = 0;
         
-        int x = 1;
-        int y = 2;
+        int fibLower = 1;
+        int fibHigher = 2;
         
         do {
-            if(x % 2 == 0) {
-                sum += x;
+            if(EulerBasicMath.isEven(fibLower)) {
+                sum += fibLower;
             }
             
-            int z = x + y;
-            x = y;
-            y = z;
+            int swapSpace = fibLower + fibHigher;
+            fibLower = fibHigher;
+            fibHigher = swapSpace;
         }
-        while(x < 4000000);
+        while(fibLower < CEILING);
         
         return sum;
     }

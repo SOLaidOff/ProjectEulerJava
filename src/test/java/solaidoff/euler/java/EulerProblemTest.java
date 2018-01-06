@@ -13,9 +13,9 @@ public abstract class EulerProblemTest {
     
     public static int ONE_MINUTE_IN_MILLIS = 60 * 1000;
     
-    public void testProblem(EulerProblem problem, int correctAnswer) {
+    public void testProblem(EulerProblem problem, long correctAnswer) {
         long startTime = System.currentTimeMillis();
-        int calculatedAnswer = problem.doProblem();
+        long calculatedAnswer = problem.doProblem();
         long endTime = System.currentTimeMillis();
         long duration = endTime - startTime;
         
