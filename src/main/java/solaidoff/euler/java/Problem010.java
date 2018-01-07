@@ -16,7 +16,8 @@ import solaidoff.euler.java.helper.EulerPrime;
  * Find the sum of all the primes below two million.
  */
 public class Problem010 extends EulerProblem {
-    // TODO: This outputs correct answer, but far too slowly (almost two minutes). A quick test confirms the problem is in the EulerPrime code.
+    // Note to self: This outputs the correct answer, but only barely quickly enough (59.9 seconds).
+    // TODO: Now that it's successfully done, look up a better algorithm online and implement that.
     public static final int CEILING = 2000000;
     
     public long doProblem() {
